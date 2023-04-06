@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "flamalight";
+    font-display: swap;
+    src: url('/font/flama/flama-light-webfont.eot'); /* IE9 */
+    src: url('/font/flama/flama-light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/font/flama/flama-light-webfont.woff') format('woff'), /* chrome、firefox */
+    url('/font/flama/flama-light-webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/font/flama/flama-light-webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+@font-face {
+    font-family: "flamamedium";
+    font-display: swap;
+    src: url('/font/flama/flama-Medium-webfont.eot'); /* IE9 */
+    src: url('/font/flama/flama-Medium-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/font/flama/flama-medium-webfont.woff') format('woff'), /* chrome、firefox */
+    url('/font/flama/flama-medium-webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/font/flama/flama-medium-webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+@font-face {
+    font-family: "flamablod";
+    font-display: swap;
+    src: url('/font/flama/flama-bold-webfont.eot'); /* IE9 */
+    src: url('/font/flama/flama-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/font/flama/flama-bold-webfont.woff') format('woff'), /* chrome、firefox */
+    url('/font/flama/flama-bold-webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/font/flama/flama-bold-webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+* {
+    font-family: "flamalight" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+a, a:hover, a:active, a:visited, a:link, a:focus {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    background: none;
+    text-decoration: none;
+}
+
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+
+#main {
+    width: 100%;
+}

@@ -1,0 +1,46 @@
+{
+  "projectMapNodes": [
+    {
+      "id": "060fabb5-9579-4d4f-9aec-ccb1f2366065",
+      "name": "home",
+      "type": "composition",
+      "data": {},
+      "order": 400,
+      "path": "/uniform/home",
+      "compositionId": "aea82197-f0fc-4a11-98e4-9cd441141e77",
+      "pathSegment": "home",
+      "projectMapId": "d138ca80-5c06-4d96-932e-d790b86e0628"
+    },
+    {
+      "id": "56bbb390-8b44-469a-b767-067b1f1d3ad5",
+      "name": "Root",
+      "type": "placeholder",
+      "data": {},
+      "order": 500,
+      "path": "/",
+      "pathSegment": "",
+      "projectMapId": "d138ca80-5c06-4d96-932e-d790b86e0628"
+    },
+    {
+      "id": "79933d51-7f3f-44bb-9f7e-4376b7c6dab9",
+      "name": "Campus",
+      "type": "composition",
+      "data": {},
+      "order": 300,
+      "path": "/uniform/campus",
+      "compositionId": "93ed3376-9b54-4e3e-bada-059a3f4eb248",
+      "pathSegment": "campus",
+      "projectMapId": "d138ca80-5c06-4d96-932e-d790b86e0628"
+    },
+    {
+      "id": "9f331de5-71d2-4b23-9cb4-1bdd52a49c0f",
+      "name": "uniform",
+      "type": "placeholder",
+      "data": {},
+      "order": 500,
+      "path": "/uniform",
+      "pathSegment": "uniform",
+      "projectMapId": "d138ca80-5c06-4d96-932e-d790b86e0628"
+    }
+  ]
+}

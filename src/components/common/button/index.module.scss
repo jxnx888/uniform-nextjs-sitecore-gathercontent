@@ -1,0 +1,57 @@
+@import "@/src/assets/styles/variables.module.scss";
+
+.btn{
+  display: block;
+  width: 100%;
+  margin: .1rem auto;
+  max-width: 4rem;
+
+   :global{
+    .ant-btn{
+      width: 100%;
+      height: .4rem;
+      border-radius: .2rem;
+      font-weight: bold;
+      border-width: 2px;
+      @media only screen and (max-width:400px) {
+        font-size: 12px;
+      }
+      &.ant-btn-default {
+        border-color: $hyperlink-color;
+        color: $hyperlink-color;
+        &:hover{
+          background: $hyperlink-color;
+          border-color: $hyperlink-color;
+          color: #fff;
+        }
+      }
+      &.ant-btn-primary{
+        background: $hyperlink-color;
+        border-color: $hyperlink-color;
+        &:hover{
+          background: $hyperlink-color-hover;
+          border-color: $hyperlink-color-hover;
+        }
+      }
+      &.danger_btn{
+        background: $action-color;
+        border-color: $action-color;
+        color: #fff;
+        &:hover{
+          background: #fff;
+          color: $action-color;
+          border-color: $action-color;
+        }
+      }
+      &[disabled],&[disabled]:hover{
+        background:$disabled;
+        border-color:$disabled;
+        color:rgba(0,0,0,.2);
+      }
+
+    }
+
+
+  }
+
+}

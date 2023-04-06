@@ -1,0 +1,121 @@
+{
+  "compositions": [
+    {
+      "composition": {
+        "_name": "Campus",
+        "_id": "93ed3376-9b54-4e3e-bada-059a3f4eb248",
+        "_slug": "campus",
+        "type": "defaultBody",
+        "parameters": {}
+      },
+      "created": "2023-03-24T20:34:15.833815+00:00",
+      "modified": "2023-03-24T20:34:15.833815+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Home Page",
+        "_id": "aea82197-f0fc-4a11-98e4-9cd441141e77",
+        "_slug": "home",
+        "type": "defaultBody",
+        "parameters": {
+          "contentId": {
+            "type": "text",
+            "value": "Test"
+          }
+        },
+        "slots": {
+          "body": [
+            {
+              "_id": "8205bfae-1f48-4ee7-b402-c08e1225a18e",
+              "type": "title",
+              "parameters": {
+                "type": {
+                  "type": "select",
+                  "value": "h1"
+                },
+                "content": {
+                  "type": "text",
+                  "value": "This is title"
+                }
+              }
+            },
+            {
+              "_id": "0609cd0e-cbe8-4a83-8f43-fed785d6edab",
+              "type": "hero",
+              "parameters": {
+                "image": {
+                  "type": "contentfulEntry",
+                  "value": {
+                    "source": "default",
+                    "entryId": "46ZrM4Z3Cq23gGhCDR1XLh"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Banner"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "This is hero banner"
+                }
+              }
+            }
+          ],
+          "content": [
+            {
+              "_id": "1d665f1a-23d2-46e4-a083-6050b640abbd",
+              "type": "hero",
+              "parameters": {
+                "image": {
+                  "type": "contentfulEntry",
+                  "value": {
+                    "source": "default",
+                    "entryId": "46ZrM4Z3Cq23gGhCDR1XLh"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "value": "This is banner"
+                }
+              }
+            },
+            {
+              "_id": "34e858ec-f218-4e6c-91f2-f669ba46afb2",
+              "type": "button",
+              "parameters": {
+                "cat": {
+                  "type": "link",
+                  "value": {
+                    "path": "/uniform/campus",
+                    "nodeId": "79933d51-7f3f-44bb-9f7e-4376b7c6dab9",
+                    "projectMapId": "d138ca80-5c06-4d96-932e-d790b86e0628"
+                  }
+                },
+                "size": {
+                  "type": "select",
+                  "value": "middle"
+                },
+                "type": {
+                  "type": "select",
+                  "value": "primary"
+                },
+                "color": {
+                  "type": "checkbox",
+                  "value": true
+                },
+                "content": {
+                  "type": "text",
+                  "value": "Campus page"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-03-20T19:00:27.736132+00:00",
+      "modified": "2023-03-24T20:34:58.647925+00:00",
+      "pattern": false
+    }
+  ]
+}

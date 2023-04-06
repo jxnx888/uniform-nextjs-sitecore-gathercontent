@@ -1,0 +1,31 @@
+$primary-color: #64FF00;
+$hyperlink-color: #00577d;
+$hyperlink-color-hover: #0079b1;
+$disabled: #f5f5f5;
+$action-color: #f6303f;
+$action-color-hover: #f85460;
+$h2-font-family:"flamablod" !important;
+$h2-font-family-medium:"flamamedium" !important;
+$h2-font-size:.24rem;
+$h2-font-color:#20272D;
+$h2-content-bullet-color:#D3D3D3;
+$h2-content-size:.21rem;
+
+$flamabold:"flamablod" !important;
+$flamamedium:"flamamedium" !important;
+$flamalight:"flamalight" !important;
+
+$cover-background-img: url("/images/cover_bg.jpg");
+//usage: import variables from '../styles/variables.module.scss'
+// variables.primaryColor
+:export {
+  primaryColor: $primary-color;
+  hyperlinkColor: $hyperlink-color;
+  hyperlinkColorHover: $hyperlink-color-hover;
+  actionColor: $action-color;
+  actionColorHover: $action-color-hover;
+  disabled: $disabled;
+  h2FontFamily: $h2-font-family;
+  h2FontSize: $h2-font-size;
+  h2FontColor: $h2-font-color;
+}

@@ -1,0 +1,295 @@
+{
+  "components": [
+    {
+      "id": "button",
+      "name": "Button",
+      "icon": "notes",
+      "parameters": [
+        {
+          "id": "type",
+          "name": "type",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "default",
+                "value": "default"
+              },
+              {
+                "text": "primary",
+                "value": "primary"
+              },
+              {
+                "text": " ghost",
+                "value": " ghost"
+              },
+              {
+                "text": "dashed",
+                "value": "dashed"
+              },
+              {
+                "text": "link",
+                "value": "link"
+              },
+              {
+                "text": "text",
+                "value": "text"
+              }
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "name": "Size",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "small",
+                "value": "small"
+              },
+              {
+                "text": "middle",
+                "value": "middle"
+              },
+              {
+                "text": "large",
+                "value": "large"
+              }
+            ]
+          }
+        },
+        {
+          "id": "cat",
+          "name": "CAT",
+          "type": "link",
+          "helpText": "CAT",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "content",
+          "name": "Text",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "color",
+          "name": "Color",
+          "type": "checkbox",
+          "helpText": "Red or Normal",
+          "typeConfig": null
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "canBeComposition": false,
+      "created": "2023-03-24T20:32:27.331017+00:00",
+      "updated": "2023-03-24T20:32:27.331017+00:00"
+    },
+    {
+      "id": "defaultBody",
+      "name": "Default Body",
+      "icon": "menu-boxed",
+      "parameters": [
+        {
+          "id": "content",
+          "name": "content",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "content",
+          "name": "content",
+          "allowedComponents": [],
+          "allowAllComponents": true,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "canBeComposition": true,
+      "created": "2023-03-20T18:58:28.231338+00:00",
+      "updated": "2023-03-24T20:48:16.086483+00:00"
+    },
+    {
+      "id": "defaultPage",
+      "name": "Default Page",
+      "icon": "file-document",
+      "parameters": [
+        {
+          "id": "contentId",
+          "name": "Content ID",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "body",
+          "name": "Body",
+          "maxComponents": 1,
+          "minComponents": 1,
+          "allowedComponents": [],
+          "allowAllComponents": true,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "canBeComposition": true,
+      "created": "2023-03-20T18:58:56.094184+00:00",
+      "updated": "2023-03-20T19:03:57.270138+00:00"
+    },
+    {
+      "id": "hero",
+      "name": "Hero",
+      "icon": "image-text",
+      "parameters": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": false,
+            "multiline": true,
+            "linesCount": "3"
+          }
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "contentfulEntry",
+          "helpText": "",
+          "typeConfig": {
+            "source": "default",
+            "required": true,
+            "allowedContentTypes": {
+              "hero": {
+                "id": "hero",
+                "name": "Hero"
+              }
+            }
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "titleParameter": "title",
+      "canBeComposition": false,
+      "created": "2023-03-20T15:24:49.213919+00:00",
+      "updated": "2023-03-24T15:59:14.989131+00:00"
+    },
+    {
+      "id": "page",
+      "name": "Page",
+      "icon": "file-document",
+      "parameters": [
+        {
+          "id": "metaTitle",
+          "name": "Meta Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "content",
+          "name": "Content",
+          "allowedComponents": [
+            "hero",
+            "$personalization",
+            "$test",
+            "$localization"
+          ],
+          "inheritAllowedComponents": false
+        }
+      ],
+      "slugSettings": {
+        "unique": "global",
+        "required": "yes",
+        "regularExpression": "",
+        "regularExpressionMessage": ""
+      },
+      "canBeComposition": true,
+      "created": "2023-03-20T18:29:06.471172+00:00",
+      "updated": "2023-03-20T18:58:56.871894+00:00"
+    },
+    {
+      "id": "title",
+      "name": "Title",
+      "icon": "format-heading",
+      "parameters": [
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "type",
+          "name": "Type",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "h1",
+                "value": "h1"
+              },
+              {
+                "text": "h2",
+                "value": "h2"
+              },
+              {
+                "text": "h3",
+                "value": "h3"
+              }
+            ]
+          }
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "canBeComposition": false,
+      "created": "2023-03-23T16:12:57.654182+00:00",
+      "updated": "2023-03-23T19:52:51.876555+00:00"
+    }
+  ]
+}

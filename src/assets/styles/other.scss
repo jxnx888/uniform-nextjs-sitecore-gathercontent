@@ -1,0 +1,170 @@
+@import "@/assets/styles/variables.module.scss";
+
+// Start Message popup CSS
+.message_pop {
+  .ant-message-notice-content {
+    width: 60%;
+    line-height: .3rem;
+    background: #52c41a;
+    color: #ffffff;
+    border-radius: 8px;
+  }
+
+  &.error_message_pop {
+    .ant-message-notice-content {
+      background: #cc303b;
+    }
+  }
+
+  &.warning_message_pop {
+    .ant-message-notice-content {
+      background: #faad14;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .message_pop {
+    .ant-message-notice-content {
+      width: 90%;
+    }
+  }
+}
+
+// End Message popup CSS
+
+
+// Start Fee Calculator
+//icons
+.icons {
+  font-size: 0.3rem;
+  text-align: center;
+  margin: auto;
+  width: .5rem;
+  height: .5rem;
+
+  &.icon_big {
+    font-size: 0.5rem;
+    position: relative;
+    top: 0.08rem;
+    right: 0.1rem;
+    width: .5rem;
+    height: .5rem;
+  }
+
+  &.icon_mid {
+    font-size: 0.4rem;
+    width: .4rem;
+    height: .4rem;
+  }
+
+  &.icon_small {
+    font-size: 0.3rem;
+  }
+
+  &.icon_print {
+    float: right;
+    cursor: pointer;
+  }
+
+  &.icon_Day {
+    vertical-align: 0;
+    margin-right: .03rem;
+    width: .13rem;
+    height: .13rem;
+  }
+
+  &.icon_Night {
+    vertical-align: -0.05em;
+    margin-right: .03rem;
+    width: .13rem;
+    height: .13rem;
+  }
+}
+
+.share_print {
+  .icon_share, .icon_print {
+    cursor: pointer;
+  }
+}
+
+//loading popup
+.ant-modal-root {
+  .ant-modal-wrap {
+    .ant-modal{
+      width: 90%!important;
+      max-width: 500px;
+    }
+    .modal_top {
+      top: 2.5rem;
+    }
+
+    .ant-modal-content {
+      background: transparent;
+      box-shadow:none
+    }
+  }
+}
+
+// fee calculator Options
+.ant-select-item.ant-select-item-option.each_option {
+  line-height: 42px;
+}
+
+// fee calculator Options End
+
+
+@media print {
+  #header, #footer, i.iconfont.icon_big {
+    display: none !important;
+  }
+  #feeSummary {
+    display: block !important;
+    -webkit-print-color-adjust: exact; // webkit for Google Chrome、Safari
+    print-color-adjust: exact; // firefox
+    color-adjust: exact;
+
+    .ant-table-wrapper {
+      .ant-table .ant-table-footer, .ant-table-content .ant-table-thead > tr > th {
+        background: #e6e6e6 !important;
+      }
+    }
+  }
+  @page {
+    // 横向
+    size: landscape;
+
+    // 边距
+    margin: 0cm 0cm 0cm 0cm;
+  }
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector,.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector{
+  border-color: $hyperlink-color !important;
+  box-shadow: 0 0 0 2px rgb(0 87 125 / 20%)!important;
+}
+.ant-steps-item {
+  &.ant-steps-item-process{
+    .ant-steps-item-icon {
+      background: $hyperlink-color!important;;
+      border-color: $hyperlink-color!important;;
+      .ant-steps-icon{
+        color: #fff!important;;
+      }
+    }
+  }
+  &.ant-steps-item-finish {
+    .ant-steps-item-icon {
+      border-color: $hyperlink-color!important;;
+      .ant-steps-icon {
+        color: $hyperlink-color!important;;
+      }
+    }
+  }
+  &.ant-steps-item-wait{
+
+  }
+}
+
+
+// End Fee Calculator
