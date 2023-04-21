@@ -10,13 +10,19 @@ import {
   gatherContentEnhancer
 } from "./gatherContent/gatherContentEnhancer";
 import { gatherContentModelConverter } from "./gatherContent/gatherContentModelConverter";
-// import {contentfulArrayModelConverter} from "./gatherContent/gatherContentArrayModelConverter";
 import {CANVAS_GATHERCONTENT_PARAMETER_TYPES} from "@uniformdev/canvas-gathercontent";
+
+// Sitecore
+import {sitecoreEnhancer} from "@/uniformlib/enhancers/sitecore/sitecoreEnhancer";
+import {sitecoreModelConverter} from "@/uniformlib/enhancers/sitecore/sitecoreModelConverter";
+import { CANVAS_SITECORE_PARAMETER_TYPES } from "@uniformdev/canvas-sitecore";
+
 import {isDevelopmentEnvironment} from '@/uniformlib/helpers/environmentUtilities'
 
 const {
   serverRuntimeConfig: {
-    gatherContentConfig
+    gatherContentConfig,
+    sitecoreConfig
   },
 } = getConfig();
 
@@ -34,7 +40,19 @@ const enhancers: EnhancerConfiguration[] = [
       gatherContentConfig.GATHER_CONTENT_USERNAME,
       gatherContentConfig.GATHER_CONTENT_PROJECT_ID
     ]
+  },
+  {
+    name: "Sitecore",
+    type: CANVAS_SITECORE_PARAMETER_TYPES,
+    enhancer: sitecoreEnhancer,
+    converter: sitecoreModelConverter,
+    config: [
+      sitecoreConfig.SITECORE_API_URL,
+      sitecoreConfig.SITECORE_API_KEY,
+      sitecoreConfig.SITECORE_SITENAME
+    ]
   }
+
 ];
 
 export const enhancerBuilder = new EnhancerBuilder();

@@ -11,6 +11,11 @@ const nextConfig = {
       GATHER_CONTENT_USERNAME: process.env.GATHER_CONTENT_USERNAME,
       GATHER_CONTENT_API_KEY: process.env.GATHER_CONTENT_API_KEY,
       GATHER_CONTENT_PROJECT_ID: process.env.GATHER_CONTENT_PROJECT_ID
+    },
+    sitecoreConfig:{
+      SITECORE_API_URL:process.env.SITECORE_API_URL,
+      SITECORE_API_KEY:process.env.SITECORE_API_KEY,
+      SITECORE_SITENAME:process.env.SITECORE_SITENAME
     }
   },
   // webpack: (config) => {

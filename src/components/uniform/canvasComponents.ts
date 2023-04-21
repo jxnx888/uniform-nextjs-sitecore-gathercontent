@@ -1,4 +1,6 @@
 import Hero  from "./Hero";
+import Hero2  from "./Hero2";
+import HeroUnit  from "./Hero-Unit";
 import Title  from "./Title";
 import Button from "../common/button"
 import {
@@ -17,6 +19,20 @@ const components: UniformComponent[] = [
        'hero'
     ],
     component: Hero,
+  } ,
+  {
+    // array for all integration id
+    types:[
+       'hero2'
+    ],
+    component: Hero2,
+  } ,
+  {
+    // array for all integration id
+    types:[
+       'heroUnit'
+    ],
+    component: HeroUnit,
   } ,
   {
     types:[

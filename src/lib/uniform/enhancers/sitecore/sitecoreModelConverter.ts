@@ -18,6 +18,8 @@ type ContentfulData = {
 };
 
 const transformImage = (image: any | undefined) => {
+  debugger
+  console.log('model convert image:', image)
 
   if (!image) return {};
   let {url} = image || {};
@@ -33,27 +35,22 @@ const transformImage = (image: any | undefined) => {
   };
 };
 
-export const gatherContentModelConverter = ({
+export const sitecoreModelConverter = ({
                                               component,
                                               parameter,
                                             }: {
   component: ComponentInstance;
   parameter: any;
 }) => {
-  const data = parameter?.value[0] as any | undefined;
-  debugger
+  const data = parameter?.value as any | undefined;
 
   if (!data) return {};
   // Uniform Component ID
   switch (component.type) {
-    case 'hero':
-      return transformImage(data?.mappedContent?.image?.value[0])
-    case 'button':
-      return {
-        title: data?.mappedContent?.title?.value || "",
-        description: data?.mappedContent?.description || "",
-        image: transformImage(data?.mappedConten?.image?.value[0]),
-      };
+    case 'hero2':
+      return data
+    case 'heroUnit':
+      return data
     default:
       return {};
   }

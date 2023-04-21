@@ -5,24 +5,23 @@ import {
 } from "@uniformdev/canvas-react";
 
 type HeroProps = ComponentProps<{
-  title: string;
-  image: any;
+  title: {
+    Title:string
+  };
+  image: {
+    HeroImage:string
+  };
   description?: string;
 }>;
 
 // @ts-ignore
 const Index: React.FC<HeroProps> = (props: HeroProps) => {
-  const {title, image, description} = props
-
+  const {title, image,} = props
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>H1: {title}</h1>
-      <img className={styles.image} src={image.src} alt=""/>
-      <div
-        className="description"
-        // @ts-ignore
-        dangerouslySetInnerHTML={{__html: description}}
-      />
+      <h1 className={styles.title}>Title: {title?.Title}</h1>
+
+      <img src={image?.HeroImage} alt=""/>
     </div>
   );
 }
